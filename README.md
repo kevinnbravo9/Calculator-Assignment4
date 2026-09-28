@@ -38,3 +38,69 @@ Create a virtual environment:
 
 ```bash
 python3 -m venv venv
+```
+
+Activate the virtual environment:
+
+```bash
+source venv/bin/activate
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Run the calculator with:
+
+```bash
+python3 main.py
+```
+
+The calculator accepts commands using this format:
+
+```text
+<operation> <num1> <num2>
+```
+
+Examples:
+
+```text
+add 5 3
+subtract 10 4
+multiply 5 3
+divide 10 2
+```
+
+Special commands:
+
+- `help` - Displays instructions for using the calculator
+- `history` - Displays calculations performed during the session
+- `exit` - Exits the calculator
+
+## Testing
+
+Run the tests with:
+
+```bash
+pytest
+```
+
+Run the tests with coverage:
+
+```bash
+pytest --cov=app --cov-branch --cov-fail-under=100
+```
+
+The project is configured to require 100% test coverage.
+
+## Continuous Integration
+
+GitHub Actions automatically runs the test suite and checks test coverage when changes are pushed to the repository or submitted through a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
